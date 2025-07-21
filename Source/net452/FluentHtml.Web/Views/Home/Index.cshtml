@@ -1,0 +1,10 @@
+﻿@using FluentHtml;
+@{    
+    this.ViewBag.Title = "Home Page";
+}
+<h1>FluentHtml Test</h1>
+<ul>
+    <li>@this.Html.Fluent().Link().Text("Forms").Action("Forms", "Tests")</li>
+    <li>@this.Html.Fluent().Link().Text("Links").Action("Links", "Tests")</li>
+    <li>@this.Html.Fluent().Link().Text("MvcForms").Action("MvcForms", "Tests")</li>
+</ul>

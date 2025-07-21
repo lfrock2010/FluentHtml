@@ -1,0 +1,72 @@
+﻿@model FluentHtml.Web.Models.ViewModel
+@{
+    ViewBag.Title = "MvcForms";
+}
+
+<h2>Mvc Forms</h2>
+<fieldset>
+    <legend>Form 1</legend>
+    @using (var form = this.Ajax.BeginForm(new AjaxOptions { }))
+    {
+        <p>
+            @this.Html.Fluent().LabelFor(x => x.PropA)
+            @this.Html.Fluent().TextBoxFor(x => x.PropA)
+            @this.Html.Fluent().ValidationMessageFor(x => x.PropA)
+
+            @this.Html.Fluent().LabelFor(x => x.PropB)
+            @this.Html.Fluent().TextBoxFor(x => x.PropB)
+            @this.Html.Fluent().ValidationMessageFor(x => x.PropB)
+
+            @this.Html.Fluent().LabelFor(x => x.PropC)
+            @this.Html.Fluent().TextBoxFor(x => x.PropC)
+            @this.Html.Fluent().ValidationMessageFor(x => x.PropC)
+
+            @this.Html.Fluent().LabelFor(x => x.Child.ChildPropA)
+            @this.Html.Fluent().TextBoxFor(x => x.Child.ChildPropA)
+            @this.Html.Fluent().ValidationMessageFor(x => x.Child.ChildPropA)
+        </p>
+        <p>
+            @for (var i = 0; i < this.Model.Childs.Count; i++)
+            {
+                <p>
+                    @this.Html.Fluent().LabelFor(x => x.Childs[i].ChildPropA)
+                    @this.Html.Fluent().TextBoxFor(x => x.Childs[i].ChildPropA)
+                    @this.Html.Fluent().ValidationMessageFor(x => x.Childs[i].ChildPropA)
+                </p>
+            }
+        </p>
+    }
+</fieldset>
+<fieldset>
+    <legend>Form 2</legend>
+    @using (var form = this.Ajax.BeginForm(new AjaxOptions { }))
+    {
+        <p>
+            @this.Html.Fluent().Label().Name("PropA")
+            @this.Html.Fluent().TextBox().Name("PropA")
+            @this.Html.Fluent().ValidationMessage().For("PropA")
+
+            @this.Html.Fluent().Label().Name("PropB")
+            @this.Html.Fluent().TextBox().Name("PropB")
+            @this.Html.Fluent().ValidationMessage().For("PropB")
+
+            @this.Html.Fluent().Label().Name("PropC")
+            @this.Html.Fluent().TextBox().Name("PropC")
+            @this.Html.Fluent().ValidationMessage().For("PropC")
+
+            @this.Html.Fluent().Label().Name("Child.ChildPropA")
+            @this.Html.Fluent().TextBox().Name("Child.ChildPropA")
+            @this.Html.Fluent().ValidationMessage().For("Child.ChildPropA")
+        </p>
+        <p>
+            @for (var i = 0; i < this.Model.Childs.Count; i++)
+            {
+                <p>
+                    @this.Html.Fluent().Label().Name(string.Format("x.Childs[{0}].ChildPropA", i))
+                    @this.Html.Fluent().TextBox().Name(string.Format("x.Childs[{0}].ChildPropA", i))
+                    @this.Html.Fluent().ValidationMessage().For(string.Format("x.Childs[{0}].ChildPropA", i))
+                </p>
+            }
+        </p>
+    }
+</fieldset>

@@ -1,0 +1,172 @@
+﻿@{
+    ViewBag.Title = "Forms";
+}
+<fieldset>
+    <legend>Form 1</legend>
+    @using (var form = this.Ajax.BeginForm(new AjaxOptions { }))
+    {
+        <p>
+            @this.Html.Fluent().Label().Name("TextBox")
+            @this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.Checkbox).Name("Checkbox").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Radio")
+            @this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.Radio).Name("Radio").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Color")
+            @this.Html.Fluent().TextBox().Value("#FFFFFF").InputType(FluentHtml.Html.Input.InputType.Color).Name("Color").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Date")
+            @this.Html.Fluent().TextBox().Value("2019-10-10").InputType(FluentHtml.Html.Input.InputType.Date).Name("Date").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("DateTime")
+            @this.Html.Fluent().TextBox().Value("2019-10-10").InputType(FluentHtml.Html.Input.InputType.DateTime).Name("DateTime").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("DateTimeLocal")
+            @this.Html.Fluent().TextBox().Value("2019-10-10").InputType(FluentHtml.Html.Input.InputType.DateTimeLocal).Name("DateTimeLocal").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Email")
+            @this.Html.Fluent().TextBox().Value("lfrock@hotmail.com").InputType(FluentHtml.Html.Input.InputType.Email).Name("Email").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("File")
+            @this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.File).Name("File").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Month")
+            @this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.Month).Name("Month").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Number")
+            @this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.Number).Name("Number").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Number")
+            @this.Html.Fluent().TextBox().Value("Demo").InputType(FluentHtml.Html.Input.InputType.Password).Name("Password").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Range")
+            @this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.Range).Name("Range").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Search")
+            @this.Html.Fluent().TextBox().Value("Find item").InputType(FluentHtml.Html.Input.InputType.Search).Name("Search").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Tel")
+            @this.Html.Fluent().TextBox().Value(9991650043).InputType(FluentHtml.Html.Input.InputType.Tel).Name("Tel").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Text")
+            @this.Html.Fluent().TextBox().Value("Test").InputType(FluentHtml.Html.Input.InputType.Text).Name("Text").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Time")
+            @this.Html.Fluent().TextBox().Value("12:10:10").InputType(FluentHtml.Html.Input.InputType.Time).Name("Time").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Url")
+            @this.Html.Fluent().TextBox().Value("http://www.google.com").InputType(FluentHtml.Html.Input.InputType.Url).Name("Url").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("Week")
+            @this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.Week).Name("Week").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+
+            @this.Html.Fluent().Label().Name("TextArea")
+            @this.Html.Fluent().TextArea().Value("Hola mundo").Name("TextArea").CssClass("ws-input").CssStyle("display", "block")
+
+            @this.Html.Fluent().Label().Name("Hidden")
+            @this.Html.Fluent().Hidden().Value(10).Name("Hidden").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now)
+        </p>
+        <p>
+            @this.Html.Fluent().TextBox().HtmlAttribute("src", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOBJREFUeNpiYBgFo2AUjHTACGMU7ShtAFL1dLK3sc+jG2QfA9NAhwBFDvj+5zsYUwJYyNH08stLhtff3jD8/fcXzGdmYmYQ5RJhEOcRp70Dbr29zfD9N6qvQQ55AXTUx5+fGNSEVWkXBSCfo1uOEiVAOZAamjkAFOzUUEOWA0CJDRbn+ABIDSkJc+hkQ04WTnBqJwRAakBqaRICoKxGDTVkOwCUzzlZcfsOJEdqWUByGgDlcwmgJcjRAWKDxEgtA8guCUG+BGFYaiclzqniAOSEOaCV0SgYBaNgFFADAAQYACKnRUpiZP1sAAAAAElFTkSuQmCC").InputType(FluentHtml.Html.Input.InputType.Image).Name("Image").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block")
+            @this.Html.Fluent().TextBox().Value("Button").InputType(FluentHtml.Html.Input.InputType.Button).Name("Button").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block")
+            @this.Html.Fluent().TextBox().Value("Reset").InputType(FluentHtml.Html.Input.InputType.Reset).Name("Reset").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block")
+            @this.Html.Fluent().TextBox().Value("Submit").InputType(FluentHtml.Html.Input.InputType.Submit).Name("Submit").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block")
+
+            @this.Html.Fluent().Button().Type(FluentHtml.Html.Tag.ButtonType.Button).Name("Button2").Text("Button 2").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block")
+            @this.Html.Fluent().Button().Type(FluentHtml.Html.Tag.ButtonType.Reset).Name("Reset2").Text("Reset 2").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block")
+            @this.Html.Fluent().Button().Type(FluentHtml.Html.Tag.ButtonType.Submit).Name("Submit2").Text("Submit 2").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block")
+        </p>
+    }
+</fieldset>
+
+<fieldset>
+    <legend>Form 2</legend>
+    @using (var form = this.Ajax.BeginForm(new AjaxOptions { }))
+    {
+        <p>
+            @{ 
+                this.Html.Fluent().Label().Name("TextBox").GetHtml();
+                this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.Checkbox).Name("Checkbox").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Radio").GetHtml();
+                this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.Radio).Name("Radio").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Color").GetHtml();
+                this.Html.Fluent().TextBox().Value("#FFFFFF").InputType(FluentHtml.Html.Input.InputType.Color).Name("Color").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Date").GetHtml();
+                this.Html.Fluent().TextBox().Value("2019-10-10").InputType(FluentHtml.Html.Input.InputType.Date).Name("Date").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("DateTime").GetHtml();
+                this.Html.Fluent().TextBox().Value("2019-10-10").InputType(FluentHtml.Html.Input.InputType.DateTime).Name("DateTime").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("DateTimeLocal").GetHtml();
+                this.Html.Fluent().TextBox().Value("2019-10-10").InputType(FluentHtml.Html.Input.InputType.DateTimeLocal).Name("DateTimeLocal").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Email").GetHtml();
+                this.Html.Fluent().TextBox().Value("lfrock@hotmail.com").InputType(FluentHtml.Html.Input.InputType.Email).Name("Email").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("File").GetHtml();
+                this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.File).Name("File").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Month").GetHtml();
+                this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.Month).Name("Month").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Number").GetHtml();
+                this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.Number).Name("Number").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Number").GetHtml();
+                this.Html.Fluent().TextBox().Value("Demo").InputType(FluentHtml.Html.Input.InputType.Password).Name("Password").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Range").GetHtml();
+                this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.Range).Name("Range").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Search").GetHtml();
+                this.Html.Fluent().TextBox().Value("Find item").InputType(FluentHtml.Html.Input.InputType.Search).Name("Search").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Tel").GetHtml();
+                this.Html.Fluent().TextBox().Value(9991650043).InputType(FluentHtml.Html.Input.InputType.Tel).Name("Tel").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Text").GetHtml();
+                this.Html.Fluent().TextBox().Value("Test").InputType(FluentHtml.Html.Input.InputType.Text).Name("Text").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Time").GetHtml();
+                this.Html.Fluent().TextBox().Value("12:10:10").InputType(FluentHtml.Html.Input.InputType.Time).Name("Time").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Url").GetHtml();
+                this.Html.Fluent().TextBox().Value("http://www.google.com").InputType(FluentHtml.Html.Input.InputType.Url).Name("Url").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("Week").GetHtml();
+                this.Html.Fluent().TextBox().Value(10).InputType(FluentHtml.Html.Input.InputType.Week).Name("Week").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                this.Html.Fluent().Label().Name("TextArea").GetHtml();
+                this.Html.Fluent().TextArea().Value("Hola mundo").Name("TextArea").CssClass("ws-input").CssStyle("display", "block").GetHtml();
+
+                this.Html.Fluent().Label().Name("Hidden").GetHtml();
+                this.Html.Fluent().Hidden().Value(10).Name("Hidden").CssClass("ws-input").CssStyle("display", "block").CssStyle("color", "red").Data("custom", DateTime.Now).GetHtml();
+
+                List<SelectListItem> items = new List<SelectListItem>
+                {
+                    new SelectListItem{ Value = "1", Text = "Uno" },
+                    new SelectListItem{ Value = "2", Text = "Dos" },
+                    new SelectListItem{ Value = "3", Text = "Tres" }
+                };
+
+                this.Html.Fluent().Label().Name("Select").GetHtml();
+                this.Html.Fluent().DropDownList().Name("Select").BindTo(items).SelectedValue("1").GetHtml();
+            }
+        </p>
+        <p>
+            @{ 
+                this.Html.Fluent().TextBox().HtmlAttribute("src", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOBJREFUeNpiYBgFo2AUjHTACGMU7ShtAFL1dLK3sc+jG2QfA9NAhwBFDvj+5zsYUwJYyNH08stLhtff3jD8/fcXzGdmYmYQ5RJhEOcRp70Dbr29zfD9N6qvQQ55AXTUx5+fGNSEVWkXBSCfo1uOEiVAOZAamjkAFOzUUEOWA0CJDRbn+ABIDSkJc+hkQ04WTnBqJwRAakBqaRICoKxGDTVkOwCUzzlZcfsOJEdqWUByGgDlcwmgJcjRAWKDxEgtA8guCUG+BGFYaiclzqniAOSEOaCV0SgYBaNgFFADAAQYACKnRUpiZP1sAAAAAElFTkSuQmCC").InputType(FluentHtml.Html.Input.InputType.Image).Name("Image").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block").GetHtml();
+                this.Html.Fluent().TextBox().Value("Button").InputType(FluentHtml.Html.Input.InputType.Button).Name("Button").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block").GetHtml();
+                this.Html.Fluent().TextBox().Value("Reset").InputType(FluentHtml.Html.Input.InputType.Reset).Name("Reset").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block").GetHtml();
+                this.Html.Fluent().TextBox().Value("Submit").InputType(FluentHtml.Html.Input.InputType.Submit).Name("Submit").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block").GetHtml();
+
+                this.Html.Fluent().Button().Type(FluentHtml.Html.Tag.ButtonType.Button).Name("Button2").Text("Button 2").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block").GetHtml();
+                this.Html.Fluent().Button().Type(FluentHtml.Html.Tag.ButtonType.Reset).Name("Reset2").Text("Reset 2").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block").GetHtml();
+                this.Html.Fluent().Button().Type(FluentHtml.Html.Tag.ButtonType.Submit).Name("Submit2").Text("Submit 2").CssClass("ws-input").CssStyle("color", "red").Data("custom", DateTime.Now).CssClass("display", "inline-block").GetHtml();
+            }
+        </p>
+    }
+</fieldset>
