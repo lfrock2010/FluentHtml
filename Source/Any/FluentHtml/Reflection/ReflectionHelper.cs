@@ -126,7 +126,7 @@ namespace FluentHtml.Reflection
 #else
             var display = Attribute.GetCustomAttribute(property, typeof(System.ComponentModel.DataAnnotations.DisplayAttribute)) as System.ComponentModel.DataAnnotations.DisplayAttribute;
             if (display is not null && display.Name.HasValue())
-                columnName = !display.Name;
+                columnName = display.Name!;
 #endif
 
             return columnName;
