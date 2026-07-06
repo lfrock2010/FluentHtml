@@ -1,0 +1,14 @@
+<Project>
+
+  <!--
+    VS 2026 ya no incluye los targeting packs de .NET Framework 4.0 / 4.5.x / 4.6 / 4.6.1
+    (esas versiones llegaron a fin de soporte). Este paquete aporta los reference assemblies
+    de .NET Framework en tiempo de compilacion, sin instalar nada en la maquina y sin impacto
+    en runtime (PrivateAssets="all"). Es no-op para TFM que no sean .NETFramework.
+    Se excluye la carpeta External (codigo de terceros).
+  -->
+  <ItemGroup Condition="!$(MSBuildProjectFullPath.Contains('External'))">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

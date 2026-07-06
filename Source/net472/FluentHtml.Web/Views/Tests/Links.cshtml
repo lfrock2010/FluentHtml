@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Links";
+}
+
+<h2>Links</h2>
+<p>
+    @this.Html.Fluent().Link().Text("Link 1").Data("demo", true).Url("javascript:void(0)")
+</p>
+<p>
+    @{
+        this.Html.Fluent()
+            .Link().Text("Link 2")
+            .Data("demo", true)
+            .Url("javascript:void(0)") 
+            .GetHtml();
+    }
+</p>
+<p>
+    @using (this.Html.Fluent().Link().Data("demo", false).Url("javascript:void(0)").Begin())
+    {
+        @:Link 3
+    }
+</p>

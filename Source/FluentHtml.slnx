@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Any/">
+    <Project Path="Any/FluentHtml/FluentHtml.csproj" />
+  </Folder>
+  <Folder Name="/net472/">
+    <Project Path="net472/FluentHtml.Tests/FluentHtml.Tests.For472.csproj" Id="b63941e2-8528-466a-965a-74a4aeda0eba" />
+    <Project Path="net472/FluentHtml.Web/FluentHtml.Web.For472.csproj" Id="170120a4-942b-4571-bdd0-890f77387196" />
+  </Folder>
+  <Folder Name="/netcoreapp3.1/">
+    <Project Path="netcoreapp3.1/FluentHtml.Web/FluentHtml.Web_3_1.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="../Master.proj" />
+  </Folder>
+</Solution>
